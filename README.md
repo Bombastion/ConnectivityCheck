@@ -16,25 +16,25 @@ These instructions assume you know how to open a terminal in Linux and move arou
 Download the connectivityCheck.sh script.  Make sure it's marked as runnable ('chmod 755 connectivityCheck.sh').  Also, make sure you have bash installed somewhere ('which bash' tells you where).
 It requires a bit of configuration based on personal taste and network setup.  Here's a quick rundown of the values specified at the top of the script.
 
-#!/bin/bash
+<p><b>#!/bin/bash</b><p>
 Not technically a value used by the script, but it determines what program runs the file.  Make sure this matches the actual location of bash on your system.
 
-connectivityOutputFile
+<b>connectivityOutputFile</b>
 The location of the file to write the logging to.  It's assumed that the user running the script has write privilege to that file.
 
-site
+<b>site</b>
 The name of the external site to try to hit.  I chose Google by default since they can handle a ping every 30 seconds.  I also recommend a logical name rather than an IP because this tests connection to your ISP's DNS.
 
-internalHost
+<b>internalHost</b>
 Less necessary to the functionality of the script, but this is a host on your network.  The purpose of this is to verify that your network's still up when the external network's down.  I recommend your router or a machine that's always up.
 
-waitTimeActive
+<b>waitTimeActive</b>
 The amount of time to wait between pings to the external site.
 
-waitTimeInactive
+<b>waitTimeInactive</b>
 The amount of time to wait between pings after an outage has been detected.
 
-pingTimeout
+<b>pingTimeout</b>
 The amount of time to give the external site to respond to your ping.  The default of 2 seconds is more than reasonable in most places.
 
 
